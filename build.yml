@@ -7,7 +7,7 @@ sources:
   path: ./0
   kubectlBuildKit:
     build:
-      file: ../1/Dockerfile
+      file: #@ "../1/Dockerfile." + data.values.programming_language_runtime
 
 #@ if/end data.values.push_images_repo:
 ---
