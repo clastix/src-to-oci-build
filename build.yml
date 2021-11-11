@@ -1,9 +1,10 @@
 #@ load("@ytt:data", "data")
+#@ load("helpers.star", "get_image_name")
 
 apiVersion: kbld.k14s.io/v1alpha1
 kind: Config
 sources:
-- image: simple-app
+- image: #@ get_image_name()
   path: ./0
   kubectlBuildKit:
     build:
@@ -14,6 +15,6 @@ sources:
 apiVersion: kbld.k14s.io/v1alpha1
 kind: Config
 destinations:
-- image: simple-app
+- image: #@ get_image_name()
   newImage: #@ data.values.push_images_repo
 
