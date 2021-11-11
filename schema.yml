@@ -1,7 +1,9 @@
 #@data/values-schema
 ---
 #@schema/nullable
+app_name: ""
+
+#@schema/nullable
 programming_language_runtime: ""
 
 push_images_repo: ""
-
