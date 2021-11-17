@@ -1,0 +1,12 @@
+FROM alpine:3.14.3
+
+RUN apk add --no-cache rust \
+	&& mkdir /src
+
+COPY ./main.rs /src
+
+WORKDIR /src
+
+RUN rustc main.rs
+
+CMD ["./main"]
