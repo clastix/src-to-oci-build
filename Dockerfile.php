@@ -1,4 +1,6 @@
-FROM php:8.0-apache-bullseye
+ARG VERSION=8.0
+
+FROM php:${VERSION}-apache-bullseye
 
 COPY . /var/www/html
 

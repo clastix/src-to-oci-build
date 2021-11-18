@@ -1,6 +1,8 @@
+ARG VERSION=1.52.1
+
 FROM alpine:3.14.3
 
-RUN apk add --no-cache rust \
+RUN apk add --no-cache rust=${VERSION}-r1 \
 	&& mkdir /src
 
 COPY ./main.rs /src

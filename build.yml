@@ -9,6 +9,8 @@ sources:
   kubectlBuildKit:
     build:
       file: #@ "../1/Dockerfile." + data.values.programming_language_runtime
+      #@ if/end data.values.programming_language_runtime_version:
+      rawOptions: #@ ["--build-arg=VERSION=" + data.values.programming_language_runtime_version]
 
 #@ if/end data.values.push_images_repo:
 ---
