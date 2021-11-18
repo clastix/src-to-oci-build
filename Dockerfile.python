@@ -1,4 +1,6 @@
-FROM python:3.9-alpine
+ARG VERSION=3.9
+
+FROM python:${VERSION}-alpine
 
 COPY . /app
 

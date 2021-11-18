@@ -1,4 +1,6 @@
-FROM golang:1.17.3-alpine3.14
+ARG VERSION=1.17.3
+
+FROM golang:${VERSION}-alpine3.14
 WORKDIR /go/src/github.com/clastix/simple-app/
 #
 # go mod caching

@@ -6,4 +6,7 @@ app_name: ""
 #@schema/nullable
 programming_language_runtime: ""
 
+#@schema/nullable
+programming_language_runtime_version: ""
+
 push_images_repo: ""
